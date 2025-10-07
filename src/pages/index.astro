@@ -4,18 +4,52 @@ import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
 
 const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
+**MarIA** (Mar + IA + María) ayuda a restaurantes y caletas a convertir su carta en un **menú digital**:
+- Escaneo por **QR** desde cualquier celular
+- Fotos, descripciones y **precios actualizables**
+- Carga **rápida** y diseño **responsivo**
+- Opción de escalar a analítica e **IA** (ML, predicción de demanda, etc.)
 
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
+> Tecnología simple, útil y sostenible — creada por Ignacio & María.
 `;
 ---
 
-<Layout title="Welcome to Astro.">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
+<Layout title="MarIA — Menús Digitales Inteligentes">
+  <ContextAlert class="mb-8" />
+  <h1 class="mb-6 text-4xl">🌊 MarIA</h1>
+
+  <Markdown content={explainer} class="mb-10 text-lg" />
+
+  <!-- DEMO de menú simple -->
+  <section id="menu" class="mb-12">
+    <h2 class="text-2xl mb-4">🍽️ Demo de carta</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="border rounded p-4">
+        <img src="/img/ceviche.jpg" alt="Ceviche" class="mb-3 rounded" />
+        <h3 class="font-semibold">Ceviche de la casa</h3>
+        <p class="text-sm text-slate-600">Pescado fresco, limón, cilantro y ají.</p>
+        <p class="mt-2 font-bold">$8.500</p>
+      </article>
+      <article class="border rounded p-4">
+        <img src="/img/empanada.jpg" alt="Empanada" class="mb-3 rounded" />
+        <h3 class="font-semibold">Empanada de mariscos</h3>
+        <p class="text-sm text-slate-600">Mezcla de mariscos de la caleta.</p>
+        <p class="mt-2 font-bold">$2.200</p>
+      </article>
+      <article class="border rounded p-4">
+        <img src="/img/paila.jpg" alt="Paila marina" class="mb-3 rounded" />
+        <h3 class="font-semibold">Paila marina</h3>
+        <p class="text-sm text-slate-600">Caldo concentrado con mariscos.</p>
+        <p class="mt-2 font-bold">$11.900</p>
+      </article>
+    </div>
+  </section>
+
+  <p class="mt-8">
+    <a href="#menu" class="btn btn-lg sm:min-w-64">Ver demo de menú</a>
+  </p>
+
+  <footer class="mt-12 text-sm text-slate-500">
+    Creado con 🌊 por Ignacio & María — 2025
+  </footer>
 </Layout>
